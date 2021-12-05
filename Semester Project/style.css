@@ -1,0 +1,456 @@
+/*  Kyle Richter
+    26 Nov 2021 */
+
+
+    /* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap');
+
+
+
+body {
+    font-family: 'Livvic', sans-serif;
+    margin: 0;
+    background: linear-gradient(149deg, rgba(236,236,236,1) 13%, rgba(250,236,251,1) 54%, rgba(255,249,234,1) 95%);
+    font-size: 120%;
+}
+
+
+
+.homePageContainer {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "nav"
+        "title"
+        "intro"
+        "wedo"
+        "testimonialArticles"
+        "getStartedArticles"
+        "footer" ;
+}
+
+/* .aboutPageContainer {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "nav"
+        "title"
+        "form"
+        "footer" ;
+} */
+
+.servicesPageContainer {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "nav"
+        "title"
+        "servicesArticle"
+        "footer" ;
+}
+
+.playPageContainer {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "nav"
+        "title"
+        "games"
+        "footer" ;
+}
+
+.applyPageContainer {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "nav"
+        "title"
+        "form"
+        "footer" ;
+}
+
+
+
+
+
+header {
+    text-align: center;
+    background: linear-gradient(176deg, rgba(229,126,237,1) 0%, rgba(236,236,236,1) 77%);
+    /* grid-area: header; */
+}
+
+#title {
+    color: darkorchid;
+    font-size: 200%;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-shadow: -1px 1px 0 black,
+                 1px 1px 0 white,
+                 1px -1px 0 black,
+                 -1px -1px 0 black;
+}
+
+#splash {
+    font-family: 'Grechen Fuemen', cursive;
+    font-size: 400%;
+    color: firebrick;
+    margin-top: 0;
+}
+
+header .headerIMG {
+    text-align: center;
+}
+
+.headerIMG  img {
+    width: 50vw ;
+}
+
+strong {
+    font-family: 'Grechen Fuemen', cursive;
+    color: firebrick;
+}
+
+
+
+nav {
+    list-style-image: url(./img/favicon\(1\).ico);
+    list-style-position: inside;
+    font-weight: 900;
+    font-size: 110%;
+    grid-area: nav;
+    text-shadow: -1px 1px 0 black,
+                 1px 1px 0 black,
+                 1px -1px 0 black,
+                 -1px -1px 0 black; ;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    border-top: 2px dotted rgb(102, 102, 102); 
+    border-bottom: 2px dotted rgb(102, 102, 102); 
+    background-image: url(./img/Cat-Silhouette-2.png);
+    background-size: contain;
+    background-repeat: space;
+    height: 100%;
+    background-position: center;
+}
+
+nav ul li {
+    text-align: center;
+    /* border-bottom: 2px dotted rgb(102, 102, 102); */
+    
+}
+
+nav ul li a {
+    width: 100vw;
+    color: darkorchid;
+    
+}
+
+
+
+nav ul li a:visited {
+    color: firebrick;
+}
+
+nav ul li a:hover {
+    color: deepskyblue;
+}
+
+nav ul li a:active {
+    color: rgb(245, 186, 186)
+}
+
+.titleContainer {
+    text-align: center;
+    /* grid-area: title; */
+    font-size: 150%;
+
+}
+
+.titleContainer p {
+    font-size: 80%;
+}
+
+.homePageIntro {
+    text-align: center;
+    /* grid-area: intro; */
+}
+
+.homePageIntro iframe{
+    max-width: 100vw;
+}
+
+
+/* #whatWeDo {
+    grid-area: wedo;
+} */
+
+.homeContent {
+    display: grid;
+    gap: 20vh
+}
+
+article {
+    margin-left: 7vw;
+    margin-right: 7vw;
+    /* margin-top: 10vh;
+    margin-bottom: 10vh; */
+}
+
+/* #testimonials {
+    grid-area: testimonialArticles;
+} */
+
+.stars {
+    color: goldenrod;
+}
+
+
+/* #getStarted {
+    grid-area: getStartedArticles;
+} */
+
+#servicesArticle {
+    /* grid-area: servicesArticle; */
+    display: grid;
+    gap: 2vh;
+}
+
+#catPictures .IMGholder img {
+    max-width: 87vw;
+    max-height: 87vh;
+}
+
+
+form {
+    margin-left: 7vw;
+    margin-right: 7vw;
+    /* grid-area: form; */
+    display: grid;
+    gap: 7vh;
+
+}
+
+form label {
+    color: cornflowerblue;
+}
+
+form li {
+    list-style-image: url(./img/favicon\(1\).ico);
+    list-style-position: inside;
+    position: relative;
+    left: 20px;
+}
+
+.serviceCheckboxes {
+    display: grid;
+    gap: 7vh;
+}
+
+form #buttons {
+    text-align: center;
+}
+
+form #buttons button {
+    width: 60vw;
+    height: 3vh;
+}
+
+
+#totaldiv {
+    position: relative;
+    position: sticky;
+    text-align: center;
+    bottom: 50px;
+    background: gold;
+    opacity: .8;
+    width: 35vw
+}
+
+.games {
+    /* grid-area: games; */
+    display: grid;
+    gap: 7vh;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.game  img{
+    max-width: 100vw;
+}
+
+
+footer {
+    text-align: center;
+    padding: 2vh;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 540px) and (max-width: 800px) {
+    nav ul {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        background-image: url(./img/black-white-zigzag-pattern.png);
+    }
+
+    /* .homeContent {
+        display: grid;
+        gap: 10vh
+    } */
+}
+
+@media only screen and (min-width: 800px) {
+
+
+
+    nav ul {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        background-image: url(./img/black-white-zigzag-pattern.png);
+    }
+
+    .homePageContainer {
+        display: grid;
+        grid-template-columns: 33vw 33vw 33vw;
+        grid-template-rows: auto;
+        
+    }
+
+    header {
+        grid-column-start: 1;
+        grid-column-end: span 4;
+    }
+
+    nav {
+        grid-column-start: 1;
+        grid-column-end: span 4;
+    }
+
+    .titleContainer {
+        grid-column-start: 1;
+        grid-column-end: span 4;
+    }
+
+    .homePageIntro {
+        grid-column-start: 1;
+        grid-column-end: span 4;
+        display: grid;
+        grid-template-columns: 50vw 50vw;
+
+    }
+
+    #welcomeStatement {
+        grid-row-start: 1;
+    }
+
+    #welcomeStatement2 {
+        grid-row-start: 2;
+    }
+
+    .homeContent{
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        display: grid;
+        gap: 0;
+    }
+
+    #whatWeDo {
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        
+    }
+
+    #testimonials {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-column-end: span 4 ;
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 15px;
+    }
+
+    
+
+    .testimonial1 {
+        
+        grid-column-start: 1;
+
+    }
+
+    footer {
+        grid-row-start: 9;
+        grid-column-start: 1;
+        grid-column-end: span 3;
+    }
+
+    #getStarted {
+        grid-row-start: 4;
+        grid-row-end: span 5;
+        grid-column-start: 2;
+        grid-column-end: span 2
+    }
+
+
+    .games {
+        padding: 50px;
+        text-align: center;
+    }
+
+    .serviceCheckboxes {
+        display: grid;
+        grid-template-columns: 40vw 40vw;
+    }
+
+    .priceList {
+        grid-column-start: 1;
+        grid-column-end: span 2;
+    }
+
+
+    #servicesArticle {
+        display: grid;
+        grid-template-columns: 40vw 40vw;
+    }
+    #servicesIntro {
+        grid-column-end: span 3;
+    }
+
+    #fitness {
+        grid-row-start: 3;
+    }
+    #training {
+        grid-row-start: 3;
+    }
+
+
+
+    
+}
+
+@media only screen and (min-width: 1600px) {
+    .games {
+        display: grid;
+        grid-template-columns: 27vw 27vw 27vw;
+    }
+
+    
+
+}

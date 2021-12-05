@@ -1,0 +1,179 @@
+<!-- Kyle Richter 26 Nov 2021 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply - Kitty C4</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img/favicon(1).ico" type="image/x-icon">
+    <meta name="description" content="Cat grooming and training.">
+    <meta name="keywords" content="cat, grooming, cat grooming, cat care, kitten, kitty, c4">
+</head>
+<body>
+    
+    <div class="applyPageContainer">
+
+        
+        <header>
+            <h3 id="title">Christine's Cat Clowder College</h3>
+            <h3 id="splash">Kitty C4</h3>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./apply.html">Apply</a></li>
+                <li><a href="./play.html">Play</a></li>
+            </ul>
+        </nav>
+
+        <div class="titleContainer">
+            <h3>Apply</h3>
+        </div>
+
+
+
+
+        <!-- ////////////////////////////      FORM     ///////////////////////////////
+        
+        -->
+        <form action="./formApplication.txt">   <!-- Filler document. Don't know how to send data to a form currently.-->
+            <p>So, you're ready to sign up your kitty with <strong>Kitty C4</strong>? Just fill out the form below and we will do the rest! You can expect a confirmation email after you hit submit.</p> <!-- There will be no email.-->
+
+            <div class="personalInfoTextboxes">
+
+                <h3 id="info">Info</h3>
+
+                <label for="firstname">First Name</label> <br>
+                <input type="text" name="firstname" id="firstname">
+                <br>
+
+                <label for="lastname">Last Name</label><br>
+                <input type="text" name="lastname" id="lastname">
+                <br><br>
+
+                <label for="catname">Cat's Name</label><br>
+                <input type="text" name="catname" id="catname">    
+                <br><br>
+
+                <label for="email">Email</label><br>
+                <input type="email" name="email" id="email">
+                <br><br>
+
+                <label for="address">Address</label> <br>
+                <input type="text" name="address" id="address">
+                <br><br>
+
+                <label for="state">State</label>
+                <input type="text" name="state" id="state" size="2" maxlength="2">
+                <br>
+                <label for="zip">Zip</label>
+                <input type="text" name="zip" id="zip" size="5" maxlength="5">
+
+
+
+            </div>
+
+            <div class="serviceCheckboxes">
+
+                <div class="priceList">
+                    <h3>Choose Your Services! </h3>
+
+                    <ul >
+                        <li>Silver: $12</li>
+                        <li>Gold: $20</li>
+                        <li>Platinum: $50</li>
+                    </ul>
+                </div>
+
+                <div class="categoryBox">
+                    <h4>Grooming</h4>
+                        <input type="checkbox" name="silverCleaning" id="silverCleaning" onchange="silver(), Cleaning(), updateTotal()">
+                        <label class="serviceCheckbox" for="silverCleaning">Silver</label> <br> 
+                        <ul><li>We pet the cat</li></ul>
+                        
+                        <input class="serviceCheckbox" type="checkbox" name="goldCleaning" id="goldCleaning" onclick="gold(), Cleaning(), updateTotal()"> 
+                        <label for="goldCleaning">Gold</label> <br>
+                        <ul><li>We brush the cat</li></ul>
+                        <input class="serviceCheckbox" type="checkbox" name="platinumCleaning" id="platinumCleaning" onclick="plat(), Cleaning(), updateTotal()"> 
+                        <label for="platinumCleaning">Platinum</label>
+                        <ul><li>We bathe the cat in a luxury essential oil bubble bath</li></ul>
+                </div>
+
+
+                <div class="categoryBox">
+                    <h4>Entertaining</h4>
+                        <input class="serviceCheckbox" type="checkbox" name="silverEntertaining" id="silverEntertaining" onclick="silver(), Entertaining(), updateTotal()">
+                        <label for="silverEntertaining">Silver</label> <br>
+                        <ul><li>We have a staring contest with the cat</li></ul>
+                        <input class="serviceCheckbox" type="checkbox" name="goldEntertaining" id="goldEntertaining" onclick="gold(), Entertaining(), updateTotal()">
+                        <label for="goldEntertaining">Gold</label> <br>
+                        <ul><li>We throw a toy for the cat</li></ul>
+                        <input class="serviceCheckbox" type="checkbox" name="platinumEntertaining" id="platinumEntertaining" onclick="plat(), Entertaining(), updateTotal()">
+                        <label for="platinumEntertaining">Platinum</label>
+                        <ul><li>We help the cat hunt local mice in the neighborhood</li></ul>
+                </div>
+
+                <div class="categoryBox">
+                    <h4>Training</h4>
+                        <input class="serviceCheckbox" type="checkbox" name="silverTraining" id="silverTraining" onclick="silver(), Training(), updateTotal()">
+                        <label for="silverTraining">Silver</label> <br>
+                        <ul><li>We potty train the cat</li></ul>
+                        <input class="serviceCheckbox" type="checkbox" name="goldTraining" id="goldTraining" onclick="gold(), Training(), updateTotal()">
+                        <label for="goldTraining">Gold</label> <br>
+                        <ul><li>We train the cat to ring a bell when it wants food</li></ul>
+                        <input class="serviceCheckbox" type="checkbox" name="platinumTraining" id="platinumTraining" onclick="plat(), Training(), updateTotal()">
+                        <label for="platinumTraining">Platinum</label>
+                        <ul><li>We teach the cat how to operate a can opener</li></ul>
+                        
+                </div>
+
+                <div class="categoryBox">
+                    <h4>Fitness</h4>
+                        <input class="serviceCheckbox" type="checkbox" name="silverFitness" id="silverFitness" onclick="silver(), Fitness(), updateTotal()">
+                        <label for="silverFitness">Silver</label> <br>
+                        <ul><li>We give the cat a pep talk</li></ul>
+                        <input class="serviceCheckbox" type="checkbox" name="goldFitness" id="goldFitness" onclick="gold(), Fitness(),updateTotal()">
+                        <label for="goldFitness">Gold</label> <br>
+                        <ul><li>We take the cat for a walk</li></ul>
+                        <input class="serviceCheckbox" type="checkbox" name="platinumFitness" id="platinumFitness" onclick="plat(), Fitness(), updateTotal()">
+                        <label for="platinumFitness">Platinum</label>
+                        <ul><li>We send the cat through a Ninja Warrior agility course</li></ul>
+                        
+                </div>
+            </div>
+
+            <div id="totaldiv">
+                <Label id="total">Total = $0</Label>
+            </div>
+            
+
+            <div id="buttons">
+                <button name="submitButton" type="submit">Submit</button>
+                <br> <br>
+                <!-- <Button name="resetAllButton" type="reset">Reset</Button> 
+                W3Schools recommends not including a reset button. That's just fine with me because I couldn't figure out how to get my "total" to reset with the button.-->
+            </div>
+
+            
+    
+        </form>
+
+
+            <!-- ///////////////////////////////    END FORM     //////////////////////////////// -->
+        
+
+
+
+
+        
+        <script src="./kittyc4script.js"></script>
+        <footer>&copy;Kyle Richter 2021&copy;</footer>
+    </div>
+</body>
+</html>
